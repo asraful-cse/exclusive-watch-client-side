@@ -10,7 +10,7 @@ import {
 import React, { useState } from "react";
 import { NavLink, useLocation, useHistory } from "react-router-dom";
 import useAuth from "../../../../hooks/useAuth";
-
+import Footer from "../../../Footer/Footer";
 import login from "../../../../images/fantasy.png";
 import googleImg from "../../../../images/googleLogin.jpg";
 const Login = () => {
@@ -38,85 +38,88 @@ const Login = () => {
 		signInWithGoogle(location, history);
 	};
 	return (
-		<Container>
-			<Grid container spacing={2}>
-				<Grid item xs={12} md={6}>
-					<Typography
-						sx={{ mt: 8, color: "#ad2121" }}
-						variant="h4"
-						gutterBottom
-					>
-						Please Login Now ?
-					</Typography>
+		<>
+			<Container>
+				<Grid container spacing={2}>
+					<Grid item xs={12} md={6}>
+						<Typography
+							sx={{ mt: 8, color: "#ad2121" }}
+							variant="h4"
+							gutterBottom
+						>
+							Please Login Now ?
+						</Typography>
 
-					{!isLoading && (
-						<form onSubmit={handleLoginSubmit}>
-							<TextField
-								sx={{ width: "75%", m: 1 }}
-								id="standard-basic"
-								name="email"
-								onChange={handleOnChange}
-								type="email"
-								label="Your Email"
-								variant="standard"
-							/>
-							<TextField
-								sx={{ width: "75%", m: 1 }}
-								id="standard-basic"
-								name="password"
-								onChange={handleOnChange}
-								type="password"
-								label="Your Password"
-								variant="standard"
-							/>
-							<br />
-							{user?.email && (
-								<Alert
-									// style={{ width: "50%", margin: "1", marginLeft: "125px" }}
-									severity="success"
-									color="info"
+						{!isLoading && (
+							<form onSubmit={handleLoginSubmit}>
+								<TextField
+									sx={{ width: "75%", m: 1 }}
+									id="standard-basic"
+									name="email"
+									onChange={handleOnChange}
+									type="email"
+									label="Your Email"
+									variant="standard"
+								/>
+								<TextField
+									sx={{ width: "75%", m: 1 }}
+									id="standard-basic"
+									name="password"
+									onChange={handleOnChange}
+									type="password"
+									label="Your Password"
+									variant="standard"
+								/>
+								<br />
+								{user?.email && (
+									<Alert
+										// style={{ width: "50%", margin: "1", marginLeft: "125px" }}
+										severity="success"
+										color="info"
+									>
+										Your Account Login Successfully
+									</Alert>
+								)}
+								{authError && (
+									<Alert
+										// style={{ width: "50%", margin: "1", marginLeft: "125px" }}
+										variant="filled"
+										severity="error"
+									>
+										{authError}
+									</Alert>
+								)}
+								<Button
+									sx={{ width: "75%", m: 1 }}
+									type="submit"
+									variant="contained"
 								>
-									Your Account Login Successfully
-								</Alert>
-							)}
-							{authError && (
-								<Alert
-									// style={{ width: "50%", margin: "1", marginLeft: "125px" }}
-									variant="filled"
-									severity="error"
-								>
-									{authError}
-								</Alert>
-							)}
-							<Button
-								sx={{ width: "75%", m: 1 }}
-								type="submit"
-								variant="contained"
-							>
-								Login
-							</Button>
+									Login
+								</Button>
 
-							<NavLink style={{ textDecoration: "none" }} to="/register">
-								<Button>New user ! please register ?</Button>
-							</NavLink>
-						</form>
-					)}
-					{isLoading && <LinearProgress color="secondary" />}
-					<p>--------------------------</p>
-					<Button onClick={handleGoogleSignIN} variant="contained">
-						<img
-							style={{ width: "100%", height: "30px", borderRadius: "4px" }}
-							src={googleImg}
-							alt=""
-						/>
-					</Button>
-				</Grid>
+								<NavLink style={{ textDecoration: "none" }} to="/register">
+									<Button>New user ! please register ?</Button>
+								</NavLink>
+							</form>
+						)}
+						{isLoading && <LinearProgress color="secondary" />}
+						<p>--------------------------</p>
+						<Button onClick={handleGoogleSignIN} variant="contained">
+							<img
+								style={{ width: "100%", height: "30px", borderRadius: "4px" }}
+								src={googleImg}
+								alt=""
+							/>
+						</Button>
+					</Grid>
 
-				<Grid item xs={12} md={6}>
-					<img style={{ width: "100%" }} src={login} alt="" />
+					<Grid item xs={12} md={6}>
+						<img style={{ width: "100%" }} src={login} alt="" />
+					</Grid>
 				</Grid>
-			</Grid>
-		</Container>
+			</Container>
+			<Footer></Footer>
+		</>
 	);
 };
 

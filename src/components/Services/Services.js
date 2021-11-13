@@ -47,7 +47,7 @@ const Services = () => {
 			) : (
 				<div className="row ">
 					{services?.slice(0, 6)?.map((pd, index) => (
-						<div className="mb-5 col-lg-4 col-sm-6  ">
+						<div className="mb-5 col-lg-4 col-sm-6  " key={pd?._id}>
 							<div className="card shadow-lg w-100 h-100 text-center rounded serviceCard card_border">
 								<div className="d-flex justify-content-center align-items-center h-75 p-2">
 									<img

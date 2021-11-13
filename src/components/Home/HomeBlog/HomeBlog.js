@@ -3,7 +3,7 @@ import React from "react";
 const HomeBlog = () => {
 	return (
 		<>
-			{/* extra section part 2 */}
+			{/* extra section part -1 */}
 			<section className="contact  py-5">
 				<div className="container">
 					<div className="section-header text-center text-dark mb-5">
@@ -52,7 +52,7 @@ const HomeBlog = () => {
 								></textarea>
 							</div>
 							<div className="form-group text-center">
-								<button type="button" className="btn btn-lg btn-primary">
+								<button type="button" className="btn btn-lg btn-danger">
 									{" "}
 									Submit{" "}
 								</button>

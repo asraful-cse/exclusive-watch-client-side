@@ -1,9 +1,9 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import useAuth from "../../hooks/useAuth";
+// import useAuth from "../../hooks/useAuth";
 
 const AddServices = () => {
-	const { user } = useAuth();
+	// const { user } = useAuth();
 	const {
 		register,
 		handleSubmit,

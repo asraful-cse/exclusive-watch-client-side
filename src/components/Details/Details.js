@@ -60,6 +60,7 @@ const Details = () => {
 					>
 						Please fill the form and Order now ?
 					</h3>
+
 					<div
 						className="col-md-6"
 						style={{
@@ -82,6 +83,18 @@ const Details = () => {
 					<br />
 					<br />
 					<div className="col-md-6">
+						<strong
+							style={{
+								textAlign: "center",
+								justifyContent: "center",
+								display: "flex",
+								padding: "0px",
+								color: "red",
+							}}
+						>
+							You must be click to email, name, product name, price and others
+							field fill then purchase now !!!!
+						</strong>
 						<form onSubmit={handleSubmit(onSubmit)}>
 							<input
 								{...register("email", { required: true })}
