@@ -2,7 +2,11 @@ import React from "react";
 import "./MakeAdmin.css";
 import { useForm } from "react-hook-form";
 const MakeAdmin = () => {
-	const { register, handleSubmit, watch, errors } = useForm();
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+	} = useForm();
 
 	const onSubmit = (data) => {
 		fetch("http://localhost:5000/makeAdmin", {
@@ -11,53 +15,56 @@ const MakeAdmin = () => {
 			body: JSON.stringify(data),
 		})
 			.then((res) => res.json())
-			.then(
-				(result) => {
-					if (result.acknowledged) {
-						alert("admin make successfully");
-					}
+			.then((result) => {
+				if (result.acknowledged) {
+					alert("admin make successfully");
 				}
-				//  console.log(documents)
-			);
-		// console.log(data);
+			});
 	};
 	return (
-		<div>
-			<h3 style={{ color: "#0c362ee3" }}>
-				Make Admin Form -- Please Added Person Information ?
-			</h3>
-			<form onSubmit={handleSubmit(onSubmit)}>
-				<input
-					className="input-field"
-					name="name"
-					placeholder="Admin User Name"
-					type="text"
-					{...register("name", { required: true })}
-				/>
-				<br />
-				<input
-					className="input-field my-3"
-					name="email"
-					placeholder="Type User Email"
-					type="email"
-					{...register("email", { required: true })}
-				/>
-				<br />
-				<input
-					className="input-field"
-					name="password"
-					placeholder="Your Password"
-					type="password"
-					{...register("password", { required: true })}
-				/>
-				<br />
-
-				<input
-					className="submit-btn btn btn-danger mt-3"
-					type="submit"
-					value="Make as Admin"
-				/>
-			</form>
+		<div className="container border border bg-light">
+			<h2 className="mt-0 my-3 p-3 text-center text-danger">
+				- Make Admin Form - <br /> Please Added Person Information ?
+			</h2>
+			<br />
+			<div className="login-box w-75 m-auto mt-6">
+				<div className="event-box  d-flex justify-content-center align-items-center">
+					<div className="login-form">
+						<form onSubmit={handleSubmit(onSubmit)}>
+							<input
+								className="input-field"
+								name="name"
+								placeholder="Admin User Name"
+								type="text"
+								{...register("name", { required: true })}
+							/>
+							<br />
+							<input
+								className="input-field my-3"
+								name="email"
+								placeholder="Type User Email"
+								type="email"
+								{...register("email", { required: true })}
+							/>
+							<br />
+							<input
+								className="input-field"
+								name="password"
+								placeholder="User Password"
+								type="password"
+								{...register("password", { required: true })}
+							/>
+							<br />
+							{errors.exampleRequired && <span>This field is required</span>}
+							<input
+								className="submit-btn btn btn-danger mt-3"
+								type="submit"
+								value="Make as Admin"
+							/>
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 };

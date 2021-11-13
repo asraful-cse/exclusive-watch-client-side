@@ -58,17 +58,16 @@ const Services = () => {
 									/>
 								</div>
 								<div className="card-body name">
-									{/* <small>{pd?.title}</small> */}
 									<h6 className="card-title">{pd?.name}</h6>
 									<strong>{pd?.description}</strong>
 								</div>
 
 								<div className="card-footer">
 									<div className="d-flex align-items-center justify-content-between ">
-										<h5 className="text-warning fw-bold"> $ {pd?.price}</h5>
+										<h5 className="text-danger fw-bold"> $ {pd?.price}</h5>
 										<Link to={`/services/${pd?._id}`}>
 											{" "}
-											<button className="btn btn-success">Order Now</button>
+											<button className="btn btn-danger">Order Now</button>
 										</Link>
 									</div>
 								</div>

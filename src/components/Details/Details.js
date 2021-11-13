@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { useForm } from "react-hook-form";
 import useAuth from "../../hooks/useAuth";
+import Footer from "../Footer/Footer";
 
 const Details = () => {
 	const [service, setService] = useState({});
@@ -46,14 +47,40 @@ const Details = () => {
 
 	return (
 		<div>
-			<div className="details-container">
+			<div className="details-container container">
 				<div className="row container">
-					<div className="col-md-6">
+					<h3
+						style={{
+							textAlign: "center",
+							justifyContent: "center",
+							display: "flex",
+							padding: "60px",
+							color: "gray",
+						}}
+					>
+						Please fill the form and Order now ?
+					</h3>
+					<div
+						className="col-md-6"
+						style={{
+							textAlign: "center",
+							justifyContent: "center",
+							border: "1px solid gray",
+
+							padding: "60px",
+							maxHeight: "450px",
+							marginTop: "9px",
+							backgroundColor: "#f0f0f0",
+						}}
+					>
 						<img className="w-50" src={service.image} alt="" />
-						<p>{service?.description}</p>
-						<h1>{service?.name}</h1>
-						<h1>$ {service?.price}</h1>
+						<br />
+						<h3 style={{ color: "gray" }}>{service?.name}</h3>
+						<p style={{ color: "gray" }}>{service?.description}</p>
+						<h4 style={{ color: "#414196" }}>$ {service?.price}</h4>
 					</div>
+					<br />
+					<br />
 					<div className="col-md-6">
 						<form onSubmit={handleSubmit(onSubmit)}>
 							<input
@@ -121,15 +148,17 @@ const Details = () => {
 
 							<input
 								type="submit"
-								value="Order now"
-								className="btn btn-info w-50"
+								value="Purchase Now"
+								className="btn btn-danger w-100"
 							/>
 						</form>
 						<br />
 						<br />
+						<div></div>
 					</div>
 				</div>
 			</div>
+			<Footer />
 		</div>
 	);
 };

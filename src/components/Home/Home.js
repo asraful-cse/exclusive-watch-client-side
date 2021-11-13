@@ -4,6 +4,7 @@ import Services from "../Services/Services";
 
 import Review from "./../Review/Review";
 import HeaderSlider from "./HeaderMain/HeaderSlider/HeaderSlider";
+import HomeBlog from "./HomeBlog/HomeBlog";
 
 const Home = () => {
 	return (
@@ -11,6 +12,7 @@ const Home = () => {
 			<HeaderSlider></HeaderSlider>
 			<Services></Services>
 			<Review></Review>
+			<HomeBlog />
 			<Footer></Footer>
 		</div>
 	);

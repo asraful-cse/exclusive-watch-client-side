@@ -12,14 +12,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { Button } from "@mui/material";
 // nested Route import link---------------------------------------------------
-import {
-	BrowserRouter as Router,
-	Switch,
-	Route,
-	Link,
-	useParams,
-	useRouteMatch,
-} from "react-router-dom";
+import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 // ------------------------------------------------------------------------
 // All component and react router dom import link--------------------------
 import { useEffect, useState } from "react";
@@ -56,8 +49,7 @@ const Dashboard = (props) => {
 				}
 			});
 	}, [user?.email]);
-	// console.log(isAdmi);---------------------------------------------------------
-	// -----------------------------------------------------------------------------
+
 	// dashboard link and props  ------------------------------------------------
 	const { window } = props;
 	const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -74,7 +66,7 @@ const Dashboard = (props) => {
 
 			<Divider />
 
-			<Link to={`${url}`} style={{ textDecoration: "none", color: "green" }}>
+			<Link to={`${url}`} style={{ textDecoration: "none", color: "red" }}>
 				<Button color="inherit">Dashboard</Button>
 			</Link>
 			{/* -------------------For User Link Added------------------ */}
@@ -143,7 +135,11 @@ const Dashboard = (props) => {
 			)}
 
 			<Link to="/login" className="nav-link">
-				<button onClick={logOut} className="btn btn-danger me-1  ">
+				<button
+					style={{ fontSize: "11px" }}
+					onClick={logOut}
+					className="btn btn-danger me-1  "
+				>
 					SIGN OUT
 				</button>
 			</Link>
@@ -152,7 +148,7 @@ const Dashboard = (props) => {
 
 	const container =
 		window !== undefined ? () => window().document.body : undefined;
-	// dashboard drawer responsive ---------------------------------------------------
+
 	// ---------------------------------------------------------------------------------
 	// ---------------------------------------------------------------------------------
 	return (

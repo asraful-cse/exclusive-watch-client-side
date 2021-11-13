@@ -4,7 +4,7 @@
 	background-color: rgb(46, 46, 46);
 	border-radius: 50%;
 	color: rgb(155, 155, 155);
-	font-size: 20px;
+	font-size: 25px;
 	align-items: center;
 	justify-content: center;
 	display: flex;
@@ -14,8 +14,8 @@
 }
 .footer-menu {
 	list-style: none;
-	margin-top: 20px;
-	font-size: 16px;
+	margin-top: 13px;
+	font-size: 18px;
 	cursor: pointer;
 }
 .footer-menu:hover {
@@ -28,11 +28,11 @@
 	background-color: rgb(182, 174, 174);
 }
 .footer-container {
-	background-color: #232b62d1;
+	background-color: #2e2e2e;
 	padding: 20px;
-	color: rgb(216, 209, 209);
+	color: rgba(218, 242, 209, 0.755);
 }
-.foter-phone-icon {
-	font-size: 30px;
+.footer-phone-icon {
+	font-size: 22px;
 	color: red;
 }

@@ -15,22 +15,20 @@ const ExploreServices = () => {
 			<section id="book-ride" className="mt-5 container">
 				<h2 className="text-center fw-bolder">
 					{" "}
-					OUR TICKET{" "}
-					<span style={{ color: "#ff4d30" }}>OFFERS AND SERVICES</span>
+					The best Exclusive{" "}
+					<span style={{ color: "#ff4d30" }}> watch brands of 2021</span>
 				</h2>
 				<p
 					style={{ fontSize: "18px", color: "gray", textAlign: "justify" }}
 					className="text-center"
 				>
-					Fantasy Kingdom has become a favourite destination for group outings,
-					picnics, company or family day out. Attractive packages are available.
-					Facilities for arranging conference, annual meeting or any corporate
-					event, <br /> birthday, wedding or any family party, photo session or
-					video shooting are also available here. Prince Ashu, Princess Lia and
-					their animal friends Zuzu, Bobo, Zipper and Bangasaur are always at
-					the park welcoming everyone with a smile. <br />
-					Oh and they have many games for you.
-					<br />
+					Today, life moves faster than ever. Keeping track of time is essential
+					in our fast-paced world—so why not do it in style, with one of the
+					world’s best DIG watches on your wrist? Luxury watches are destined
+					never to go out of fashion. Even though we now have clocks on our
+					phones, nothing beats the exceptional elegance of a beautifully
+					crafted timepiece. Suddenly, checking the time becomes a rather
+					exciting endeavour.
 				</p>
 				<br /> <br />
 				{services.length === 0 ? (
