@@ -14,7 +14,7 @@ const MyBookings = () => {
 	const { user } = useAuth();
 
 	useEffect(() => {
-		fetch(`http://localhost:5000/myOrder/${user?.email}`)
+		fetch(`https://boiling-bastion-71072.herokuapp.com/myOrder/${user?.email}`)
 			.then((res) => res.json())
 			.then((data) => setBooking(data));
 	}, [user?.email]);
@@ -22,7 +22,7 @@ const MyBookings = () => {
 	const handleDeleteUser = (id) => {
 		const proceed = window.confirm("Are you sure, you want to delete?");
 		if (proceed) {
-			const url = `http://localhost:5000/myOrder/${id}`;
+			const url = `https://boiling-bastion-71072.herokuapp.com/myOrder/${id}`;
 			fetch(url, {
 				method: "DELETE",
 			})

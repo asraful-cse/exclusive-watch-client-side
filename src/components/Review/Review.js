@@ -11,7 +11,7 @@ const Review = () => {
 	} = useForm();
 	const { user } = useAuth();
 	const onSubmit = (data) => {
-		fetch("http://localhost:5000/addReview", {
+		fetch("https://boiling-bastion-71072.herokuapp.com/addReview", {
 			method: "POST",
 			headers: { "content-type": "application/json" },
 			body: JSON.stringify(data),

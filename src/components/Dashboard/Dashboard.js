@@ -36,7 +36,9 @@ const Dashboard = (props) => {
 	const [isAdmin, setIsAdmin] = useState(false);
 	const [isUser, setIsUser] = useState(false);
 	useEffect(() => {
-		fetch(`http://localhost:5000/checkAdmin/${user?.email}`)
+		fetch(
+			`https://boiling-bastion-71072.herokuapp.com/checkAdmin/${user?.email}`
+		)
 			.then((res) => res.json())
 			.then((data) => {
 				if (data[0]?.role === "admin") {

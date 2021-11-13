@@ -5,7 +5,7 @@ import "../Services.css";
 const ExploreServices = () => {
 	const [services, setServices] = useState([]);
 	useEffect(() => {
-		fetch("http://localhost:5000/allServices")
+		fetch("https://boiling-bastion-71072.herokuapp.com/allServices")
 			.then((res) => res.json())
 			.then((data) => setServices(data));
 	}, []);

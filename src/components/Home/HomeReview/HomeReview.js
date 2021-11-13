@@ -19,7 +19,7 @@ const labels = {
 const HomeReview = () => {
 	const [reviews, setReviews] = useState([]);
 	useEffect(() => {
-		fetch("http://localhost:5000/addReview")
+		fetch("https://boiling-bastion-71072.herokuapp.com/addReview")
 			.then((res) => res.json())
 			.then((data) => setReviews(data));
 	}, []);
