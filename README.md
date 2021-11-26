@@ -14,6 +14,6 @@
 * Manage All Orders page for the admin, the logged in admin will see the orders placed by every user.
 * Manage Products page, an admin can delete any of the products.
 
-## ClIENT SIDE LIVE LINK : [https://exclusive-watch-c1b7d.web.app/]
+* ClIENT SIDE LIVE LINK : [https://exclusive-watch-c1b7d.web.app/]
 
-## SERVER SIDE LIVE LINK :[https://boiling-bastion-71072.herokuapp.com/]
+* SERVER SIDE LIVE LINK :[https://boiling-bastion-71072.herokuapp.com/]
