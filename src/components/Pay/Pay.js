@@ -6,6 +6,7 @@ const Pay = () => {
 			<h5 class="card-title text-bold">Payment system coming soon --------</h5>
 			<img src={comingSoon} class="card-img" alt="..." />
 			<div class="card-img-overlay"></div>
+			<br />
 		</div>
 	);
 };
