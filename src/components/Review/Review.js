@@ -11,7 +11,7 @@ const Review = () => {
 	} = useForm();
 	const { user } = useAuth();
 	const onSubmit = (data) => {
-		fetch("https://boiling-bastion-71072.herokuapp.com/addReview", {
+		fetch("https://exclusive-watch-server-side.onrender.com/addReview", {
 			method: "POST",
 			headers: { "content-type": "application/json" },
 			body: JSON.stringify(data),

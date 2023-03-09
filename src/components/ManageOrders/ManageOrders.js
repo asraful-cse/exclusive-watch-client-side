@@ -17,7 +17,7 @@ const ManageOrders = () => {
 
 	console.log(status);
 	useEffect(() => {
-		fetch("https://boiling-bastion-71072.herokuapp.com/allOrders")
+		fetch("https://exclusive-watch-server-side.onrender.com/allOrders")
 			.then((res) => res.json())
 			.then((data) => setOrders(data));
 	}, []);
@@ -30,7 +30,7 @@ const ManageOrders = () => {
 	const onSubmit = (data) => {
 		console.log(data, orderId);
 		fetch(
-			`https://boiling-bastion-71072.herokuapp.com/statusUpdate/${orderId}`,
+			`https://exclusive-watch-server-side.onrender.com/statusUpdate/${orderId}`,
 			{
 				method: "PUT",
 				headers: { "content-type": "application/json" },

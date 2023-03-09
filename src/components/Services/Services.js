@@ -4,7 +4,7 @@ import "./Services.css";
 const Services = () => {
 	const [services, setServices] = useState([]);
 	useEffect(() => {
-		fetch("https://boiling-bastion-71072.herokuapp.com/allServices")
+		fetch("https://exclusive-watch-server-side.onrender.com/allServices")
 			.then((res) => res.json())
 			.then((data) => setServices(data));
 	}, []);

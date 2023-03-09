@@ -19,7 +19,7 @@ const labels = {
 const HomeReview = () => {
 	const [reviews, setReviews] = useState([]);
 	useEffect(() => {
-		fetch("https://boiling-bastion-71072.herokuapp.com/addReview")
+		fetch("https://exclusive-watch-server-side.onrender.com/addReview")
 			.then((res) => res.json())
 			.then((data) => setReviews(data));
 	}, []);

@@ -114,7 +114,7 @@ const useFirebase = () => {
 	// create user er jonno function--------------------step(9)------
 	const saveUser = (email, displayName, method) => {
 		const user = { email, displayName };
-		fetch("https://boiling-bastion-71072.herokuapp.com/addUserInfo", {
+		fetch("https://exclusive-watch-server-side.onrender.com/addUserInfo", {
 			method: method,
 			headers: {
 				"content-type": "application/json",

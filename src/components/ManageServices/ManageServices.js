@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const ManageServices = () => {
 	const [services, setServices] = useState([]);
 	useEffect(() => {
-		fetch("https://boiling-bastion-71072.herokuapp.com/allServices")
+		fetch("https://exclusive-watch-server-side.onrender.com/allServices")
 			.then((res) => res.json())
 			.then((data) => setServices(data));
 	}, []);
@@ -12,7 +12,7 @@ const ManageServices = () => {
 	const handleDeleteUser = (id) => {
 		const proceed = window.confirm("Are you sure, you want to delete?");
 		if (proceed) {
-			const url = `https://boiling-bastion-71072.herokuapp.com/allServices/${id}`;
+			const url = `https://exclusive-watch-server-side.onrender.com/allServices/${id}`;
 			fetch(url, {
 				method: "DELETE",
 			})

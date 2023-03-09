@@ -14,7 +14,7 @@ const MyBookings = () => {
 	const { user } = useAuth();
 
 	useEffect(() => {
-		fetch(`https://boiling-bastion-71072.herokuapp.com/myOrder/${user?.email}`)
+		fetch(`https://exclusive-watch-server-side.onrender.com/myOrder/${user?.email}`)
 			.then((res) => res.json())
 			.then((data) => setBooking(data));
 	}, [user?.email]);
@@ -22,7 +22,7 @@ const MyBookings = () => {
 	const handleDeleteUser = (id) => {
 		const proceed = window.confirm("Are you sure, you want to delete?");
 		if (proceed) {
-			const url = `https://boiling-bastion-71072.herokuapp.com/myOrder/${id}`;
+			const url = `https://exclusive-watch-server-side.onrender.com/myOrder/${id}`;
 			fetch(url, {
 				method: "DELETE",
 			})

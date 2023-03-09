@@ -21,7 +21,7 @@ const Details = () => {
 	const onSubmit = (data) => {
 		data.email = user?.email;
 		data.status = "pending";
-		fetch("https://boiling-bastion-71072.herokuapp.com/addOrders", {
+		fetch("https://exclusive-watch-server-side.onrender.com/addOrders", {
 			method: "POST",
 			headers: { "content-type": "application/json" },
 			body: JSON.stringify(data),
@@ -41,7 +41,7 @@ const Details = () => {
 
 	useEffect(() => {
 		fetch(
-			`https://boiling-bastion-71072.herokuapp.com/singleService/${serviceId}`
+			`https://exclusive-watch-server-side.onrender.com/singleService/${serviceId}`
 		)
 			.then((res) => res.json())
 			.then((data) => setService(data));

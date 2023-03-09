@@ -9,7 +9,7 @@ const MakeAdmin = () => {
 	} = useForm();
 
 	const onSubmit = (data) => {
-		fetch("https://boiling-bastion-71072.herokuapp.com/makeAdmin", {
+		fetch("https://exclusive-watch-server-side.onrender.com/makeAdmin", {
 			method: "PUT",
 			headers: { "content-type": "application/json" },
 			body: JSON.stringify(data),
